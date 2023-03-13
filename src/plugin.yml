@@ -1,0 +1,6 @@
+main:
+name: SabelPILEDControl
+version: 1.0
+author: SabelSchulenNBG
+description: An Example plugin
+commands:
