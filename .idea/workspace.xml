@@ -2,52 +2,87 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SabelPiLEDControl" />
+      <artifact name="LEDController" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5bf13ace-077b-4b76-b355-b7f1a4dac681" name="Changes" comment="" />
+    <list default="true" id="79433ad3-098a-4a85-be6b-1b63328fb7ef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LEDController.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/MinecraftLEDControl.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_api_1_19_3_R0_1_20230304_005121_55_shaded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/commands/SetColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SabelPiLEDControl.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jython_standalone_2_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/spigot_api_1_19_3_R0_1_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SabelPiLEDControl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MinecraftLEDControl.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SabelPiLEDControl/SabelPiLEDControl.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SabelPiLEDControl/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SabelPiLEDControl/plugin.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2MxWA8UmfjhDR8F2keELvQAPJuN" />
+  <component name="ProjectId" id="2My8hkUgRq40aGRx1MYORMvsEsD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/G10a-10/Downloads",
-    "project.structure.last.edited": "Artifacts",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/SandwichFox/Documents/Development/Java/Librarys/Minecraft/spigot-api-1.19.3-R0.1-20230304.005121-55-shaded.jar",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\G10a-10\IdeaProjects\SabelPiLEDControl" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5bf13ace-077b-4b76-b355-b7f1a4dac681" name="Changes" comment="" />
-      <created>1678709572645</created>
+      <changelist id="79433ad3-098a-4a85-be6b-1b63328fb7ef" name="Changes" comment="" />
+      <created>1678728583010</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1678709572645</updated>
+      <updated>1678728583010</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

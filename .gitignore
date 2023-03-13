@@ -6,6 +6,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Java files
+*.jar
+*.class
+
+
 # Distribution / packaging
 .Python
 build/

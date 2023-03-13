@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SabelPiLEDControl.iml" filepath="$PROJECT_DIR$/SabelPiLEDControl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MinecraftLEDControl.iml" filepath="$PROJECT_DIR$/MinecraftLEDControl.iml" />
     </modules>
   </component>
 </project>
