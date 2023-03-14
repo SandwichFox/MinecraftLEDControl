@@ -8,8 +8,12 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
+import java.net.Socket;
 
 public class Main extends JavaPlugin implements Listener {
+    private static final String HOST = "localhost";
+    private static final int PORT = 8000;
+
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
@@ -26,27 +30,37 @@ public class Main extends JavaPlugin implements Listener {
         if (event.getClickedBlock().getType().equals(Material.STONE_BUTTON))
             if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
                 getServer().getLogger().info("Stone button was pressed!");
-                executePythonScript("/home/sabelpi/minecraft_server/change_led.py");
+                sendCommandToPythonScript("red");
             }
         if (event.getClickedBlock().getType().equals(Material.POLISHED_BLACKSTONE_BUTTON))
             if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
                 getServer().getLogger().info("Blackstone button was pressed!");
-                executePythonScript("/home/sabelpi/minecraft_server/change_led.py");
+                sendCommandToPythonScript("green");
             }
         if (event.getClickedBlock().getType().equals(Material.OAK_BUTTON))
             if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                 getServer().getLogger().info("Oak button was pressed!");
-                 executePythonScript("/home/sabelpi/minecraft_server/change_led.py");
+                getServer().getLogger().info("Oak button was pressed!");
+                sendCommandToPythonScript("blue");
             }
+        try {
+        } catch (NullPointerException e) {
+            // do nothing
+        }
+
     }
 
-    private void executePythonScript(String scriptPath) {
-        try {
-            Runtime.getRuntime().exec("python3 " + scriptPath);
+    private void sendCommandToPythonScript(String command) {
+        try (Socket socket = new Socket(HOST, PORT)) {
+            socket.getOutputStream().write(command.getBytes());
+            socket.getOutputStream().flush();
+            byte[] response = new byte[2];
+            socket.getInputStream().read(response);
+            String responseString = new String(response);
+            if (!responseString.equals("OK")) {
+                getServer().getLogger().warning("Received invalid response from LEDControl server: " + responseString);
+            }
         } catch (IOException e) {
-            e.printStackTrace();
+            getServer().getLogger().warning("Error communicating with LEDControl server: " + e.getMessage());
         }
     }
 }
-
-

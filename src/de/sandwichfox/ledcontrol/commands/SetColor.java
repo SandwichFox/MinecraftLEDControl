@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import java.io.IOException;
+import
 
 public class SetColor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -21,13 +22,16 @@ public class SetColor implements CommandExecutor {
         }
         return true;
     }
-    public void executePythonScript(String scriptPath , String color) {
+
+    public void executePythonScript(String host, int port, String color) {
         try {
-            Runtime.getRuntime().exec("python " + scriptPath + " " + color);
+            Socket socket = new Socket(host, port);
+            OutputStream outputStream = socket.getOutputStream();
+            outputStream.write(color.getBytes());
+            outputStream.flush();
+            socket.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 }
-
-
