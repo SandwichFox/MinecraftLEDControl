@@ -2,7 +2,6 @@
   <artifact type="jar" name="LEDController">
     <output-path>$PROJECT_DIR$/out/artifacts/LEDController</output-path>
     <root id="archive" name="LEDController.jar">
-      <element id="library" level="project" name="spigot-api-1.19.3-R0.1-20230304.005121-55-shaded" />
       <element id="module-output" name="MinecraftLEDControl" />
     </root>
   </artifact>

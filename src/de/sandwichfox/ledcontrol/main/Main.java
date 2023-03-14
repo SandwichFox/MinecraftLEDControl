@@ -36,13 +36,13 @@ public class Main extends JavaPlugin implements Listener {
         if (event.getClickedBlock().getType().equals(Material.OAK_BUTTON))
             if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
                  getServer().getLogger().info("Oak button was pressed!");
-                executePythonScript("/home/sabelpi/minecraft_server/change_led.py");
+                 ;
             }
     }
 
     private void executePythonScript(String scriptPath) {
         try {
-            Runtime.getRuntime().exec("python" + scriptPath);
+            Runtime.getRuntime().exec("python3 " + scriptPath);
         } catch (IOException e) {
             e.printStackTrace();
         }
