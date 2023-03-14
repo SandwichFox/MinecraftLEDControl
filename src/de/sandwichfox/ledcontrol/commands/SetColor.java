@@ -1,19 +1,22 @@
 package de.sandwichfox.ledcontrol.commands;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.Socket;
+
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.io.IOException;
-import
 
 public class SetColor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player player) {
             if (args.length == 1) {
                 String color = args[0];
-                executePythonScript("change_led.py", color);
+                sendColorToPythonScript("localhost", 12345, color);
                 player.sendMessage("Farbe wurde zu " + color + " geändert!");
             }
             else {
@@ -23,13 +26,15 @@ public class SetColor implements CommandExecutor {
         return true;
     }
 
-    public void executePythonScript(String host, int port, String color) {
-        try {
-            Socket socket = new Socket(host, port);
-            OutputStream outputStream = socket.getOutputStream();
-            outputStream.write(color.getBytes());
-            outputStream.flush();
-            socket.close();
+    public void sendColorToPythonScript(String host, int port, String color) {
+        try (Socket socket = new Socket(host, port)) {
+            OutputStream output = socket.getOutputStream();
+            output.write(color.getBytes());
+
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            String response = input.readLine();
+
+            System.out.println("Python script responded with: " + response);
         } catch (IOException e) {
             e.printStackTrace();
         }

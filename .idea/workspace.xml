@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79433ad3-098a-4a85-be6b-1b63328fb7ef" name="Changes" comment="Fixed Everything">
-      <changelist_data name="SandwichFox" email="sandwichfox@proton.me" />
+    <list default="true" id="79433ad3-098a-4a85-be6b-1b63328fb7ef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_api_1_19_3_R0_1_20230304_005121_55_shaded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/commands/SetColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/commands/SetColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,11 +27,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="SandwichFox &lt;sandwichfox@proton.me&gt;" />
-      </list>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -52,11 +46,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/G10a-10/Documents/Java Libs/spigot-api-1.19.3-R0.1-20230304.005121-55-shaded.jar",
+    "last_opened_file_path": "C:/Users/SandwichFox/Documents/Development/Java/Librarys/Minecraft/spigot-api-1.19.3-R0.1-20230304.005121-55-shaded.jar",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler"
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,41 +62,9 @@
       <option name="presentableId" value="Default" />
       <updated>1678728583010</updated>
     </task>
-    <task id="LOCAL-00001" summary="Fixed Everything">
-      <created>1678797837060</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678797837060</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fixed Everything">
-      <created>1678797864951</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1678797864951</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed Everything" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Everything" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
