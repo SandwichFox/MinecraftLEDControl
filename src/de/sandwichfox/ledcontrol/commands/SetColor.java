@@ -15,7 +15,7 @@ public class SetColor implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (sender instanceof Player player) {
             if (args.length == 1) {
-                String color = args[0];
+                String color = args[1];
                 sendColorToPythonScript("localhost", 12345, color);
                 player.sendMessage("Farbe wurde zu " + color + " geändert!");
             }

@@ -42,11 +42,15 @@ public class Main extends JavaPlugin implements Listener {
                 getServer().getLogger().info("Oak button was pressed!");
                 sendCommandToPythonScript("blue");
             }
+        if (event.getClickedBlock().getType().equals(Material.ACACIA_BUTTON))
+            if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+                getServer().getLogger().info("Acacia button was pressed!");
+                sendCommandToPythonScript("rainbow");
+            }
         try {
         } catch (NullPointerException e) {
             // do nothing
         }
-
     }
 
     private void sendCommandToPythonScript(String command) {
