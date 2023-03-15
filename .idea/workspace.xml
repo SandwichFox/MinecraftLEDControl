@@ -9,12 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79433ad3-098a-4a85-be6b-1b63328fb7ef" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/spigot_api_1_19_3_R0_1_20230304_005121_55_shaded.xml" beforeDir="false" />
+    <list default="true" id="79433ad3-098a-4a85-be6b-1b63328fb7ef" name="Changes" comment="Added Rainbow mode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/commands/SetColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/commands/SetColor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/sandwichfox/ledcontrol/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +62,14 @@
       <option name="presentableId" value="Default" />
       <updated>1678728583010</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added Rainbow mode">
+      <created>1678890999851</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678890999852</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,5 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Added Rainbow mode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Rainbow mode" />
   </component>
 </project>

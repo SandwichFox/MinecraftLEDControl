@@ -53,7 +53,7 @@ public class Main extends JavaPlugin implements Listener {
         }
     }
 
-    private void sendCommandToPythonScript(String command) {
+    public void sendCommandToPythonScript(String command) {
         try (Socket socket = new Socket(HOST, PORT)) {
             socket.getOutputStream().write(command.getBytes());
             socket.getOutputStream().flush();
