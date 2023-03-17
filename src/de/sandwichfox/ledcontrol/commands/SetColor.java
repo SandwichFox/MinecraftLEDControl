@@ -7,6 +7,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import de.sandwichfox.ledcontrol.main.Main;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class SetColor implements CommandExecutor {
 
     private final Main plugin;
@@ -24,12 +27,27 @@ public class SetColor implements CommandExecutor {
         if (sender instanceof Player player) {
             if (args.length == 1) {
                 String color = args[0];
-                //Main.sendCommandToPythonScript(color);
-                player.sendMessage("Farbe wurde zu " + color + " geändert!");
-            } else {
-                player.sendMessage("/SetColor <color>");
+                if (color.startsWith("#")) {
+                    if (color.length() == 7) {
+                        plugin.sendCommandToPythonScript("color");
+                        player.sendMessage("§bFarbe wurde zu " + color + " geändert!");
+                    } else
+                        player.sendMessage("§cDies ist kein Hexcode!");
+                } else {
+                    color = color.toLowerCase();
+                    if (colorlist.contains(color)) {
+                        plugin.sendCommandToPythonScript("color");
+                        player.sendMessage("§bFarbe wurde zu " + color + " geändert!");
+                    } else
+                        player.sendMessage("§cDies ist keine verfügbare Farbe!");
+                }
+                return true;
+
             }
         }
-        return true;
+        return false;
+
     }
 }
+
+

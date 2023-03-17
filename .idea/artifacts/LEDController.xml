@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="LEDController">
+  <artifact type="jar" build-on-make="true" name="LEDController">
     <output-path>$PROJECT_DIR$/out/artifacts/LEDController</output-path>
     <root id="archive" name="LEDController.jar">
       <element id="module-output" name="MinecraftLEDControl" />

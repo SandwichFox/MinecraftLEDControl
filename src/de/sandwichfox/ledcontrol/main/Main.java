@@ -1,5 +1,6 @@
 package de.sandwichfox.ledcontrol.main;
 
+import de.sandwichfox.ledcontrol.commands.SetColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -24,39 +25,42 @@ public class Main extends JavaPlugin implements Listener {
     public void onEnable() {
 
         getServer().getPluginManager().registerEvents(this, this);
-        getServer().getLogger().info("LEDController has been enabled!");
+       logger.info("Enabled!");
+        this.getCommand("SetColor").setExecutor(new SetColor(this));
     }
 
     @Override
     public void onDisable() {
-        getServer().getLogger().info("LEDController has been disabled!");
+        logger.info("Disabled!");
     }
 
     @EventHandler
     public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.getClickedBlock().getType().equals(Material.STONE_BUTTON))
-            if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                getServer().getLogger().info("Stone button was pressed!");
-                sendCommandToPythonScript("red");
+        Player player = event.getPlayer();
+        Block block = event.getClickedBlock();
+
+        if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+            switch (block.getType().toString()) {
+                case "OAK_BUTTON" -> {
+                    sendCommandToPythonScript("blue");
+                   logger.info("Oak button was pressed!");
+                }
+                case "STONE_BUTTON" -> {
+                    sendCommandToPythonScript("red");
+                   logger.info("Stone button was pressed!");
+                }
+                case "ACACIA_BUTTON" -> {
+                    sendCommandToPythonScript("rainbow");
+                   logger.info("Acacia button was pressed!");
+                }
+                case "POLISHED_BLACKSTONE_BUTTON" -> {
+                    sendCommandToPythonScript("green");
+                   logger.info("Polished Blackstone button was pressed!");
+                }
+                default -> {
+                    return;
+                }
             }
-        if (event.getClickedBlock().getType().equals(Material.POLISHED_BLACKSTONE_BUTTON))
-            if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                getServer().getLogger().info("Blackstone button was pressed!");
-                sendCommandToPythonScript("green");
-            }
-        if (event.getClickedBlock().getType().equals(Material.OAK_BUTTON))
-            if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                getServer().getLogger().info("Oak button was pressed!");
-                sendCommandToPythonScript("blue");
-            }
-        if (event.getClickedBlock().getType().equals(Material.ACACIA_BUTTON))
-            if (event.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
-                getServer().getLogger().info("Acacia button was pressed!");
-                sendCommandToPythonScript("rainbow");
-            }
-        try {
-        } catch (NullPointerException e) {
-            // do nothing
         }
     }
 
