@@ -5,8 +5,9 @@ author: SandwichFox
 api-version: 1.19
 description: This Plugin is for Controlling LEDs in Minecraft through the GPIO Ports on an Raspberry Pi
 website: https://github.com/SandwichFox/MinecraftLEDControl
+
 commands:
-  setcolor:
-    description: Set the Color of the LED
-    usage: /setcolor <color>
-    aliases: [sc]
+   setcolor:
+     description: Set the Color of the LED
+     usage: /setcolor <color or HEX-Code>
+     aliases: [sc]

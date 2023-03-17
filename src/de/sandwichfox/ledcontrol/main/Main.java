@@ -1,6 +1,8 @@
 package de.sandwichfox.ledcontrol.main;
 
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -9,13 +11,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
 import java.net.Socket;
+import java.util.logging.Logger;
 
 public class Main extends JavaPlugin implements Listener {
+
     private static final String HOST = "localhost";
     private static final int PORT = 8000;
+    private Logger logger = getLogger();
+
 
     @Override
     public void onEnable() {
+
         getServer().getPluginManager().registerEvents(this, this);
         getServer().getLogger().info("LEDController has been enabled!");
     }
@@ -61,10 +68,11 @@ public class Main extends JavaPlugin implements Listener {
             socket.getInputStream().read(response);
             String responseString = new String(response);
             if (!responseString.equals("OK")) {
-                getServer().getLogger().warning("Received invalid response from LEDControl server: " + responseString);
+                logger.warning("Received invalid response from LEDControl server: " + responseString);
             }
         } catch (IOException e) {
-            getServer().getLogger().warning("Error communicating with LEDControl server: " + e.getMessage());
+            logger.warning("Error communicating with LEDControl server: " + e.getMessage());
         }
     }
+
 }
